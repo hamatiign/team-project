@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>音楽史クイズ</title>
+    <link rel="stylesheet" href="../css/~1900.css" />
+    <style>
+      .quiz-container {
+        max-width: 800px;
+        margin: 2em auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .question {
+        margin-bottom: 20px;
+      }
+      .options {
+        list-style: none;
+        padding: 0;
+      }
+      .options li {
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #e1e1e1;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .options li:hover {
+        background-color: #d1d1d1;
+      }
+      .options li.correct {
+        background-color: #a8d5ba; 
+      }
+      .options li.incorrect {
+        background-color: #f7a7a7;
+      }
+      #result {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      #next-btn {
+        display: none;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #555;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h1>音楽史クイズ</h1>
+      <div id="quiz">
+        <div class="question">
+          <h2 id="question-text"></h2>
+          <ul id="options" class="options"></ul>
+        </div>
+        <button id="next-btn">次の問題へ</button>
+        <div id="result"></div>
+      </div>
+    </div>
+
+    <script>
+      const quizData = [
+        {
+          question:
+            "19世紀末にアメリカの黒人ピアニストたちによって生み出された、シンコペーションが特徴のピアノ音楽は何でしょう？",
+          options: ["ブルース", "ラグタイム", "ゴスペル", "ジャズ"],
+          answer: "ラグタイム",
+        },
+        {
+          question:
+            "1930年代のアメリカで流行した、ビッグバンドによるダンス音楽は何でしょう？",
+          options: ["スウィング・ジャズ", "R&B", "ロックンロール", "ゴスペル"],
+          answer: "スウィング・ジャズ",
+        },
+        {
+          question:
+            "NirvanaやPearl Jamが代表的な、1990年代にシアトルを中心に生まれたロックのジャンルは何でしょう？",
+          options: ["ブリットポップ", "グランジ / オルタナティヴ・ロック", "シンセポップ", "ハードロック"],
+          answer: "グランジ / オルタナティヴ・ロック",
+        },
+        {
+          question:
+            "2000年代にブームとなった、Blink-182やAvril Lavigneに代表されるパンクロックのサブジャンルは何でしょう？",
+          options: ["ガレージロック・リバイバル", "エモ", "ポップ・パンク", "ハードコア"],
+          answer: "ポップ・パンク",
+        },
+         {
+          question:
+            "2010年代以降、世界の音楽シーンの主流となっている、重いキックドラムと細かいハイハットが特徴のヒップホップのスタイルは何でしょう？",
+          options: ["トラップ", "G-Funk", "EDM", "K-POP"],
+          answer: "トラップ",
+        },
+      ];
+
+      const questionText = document.getElementById("question-text");
+      const optionsContainer = document.getElementById("options");
+      const resultContainer = document.getElementById("result");
+      const nextBtn = document.getElementById("next-btn");
+
+      let currentQuestionIndex = 0;
+      let score = 0;
+
+      function loadQuestion() {
+        resultContainer.textContent = "";
+        nextBtn.style.display = "none";
+        const currentQuestion = quizData[currentQuestionIndex];
+        questionText.textContent = currentQuestion.question;
+        optionsContainer.innerHTML = "";
+        currentQuestion.options.forEach((option) => {
+          const li = document.createElement("li");
+          li.textContent = option;
+          li.addEventListener("click", () => checkAnswer(option));
+          optionsContainer.appendChild(li);
+        });
+      }
+
+      function checkAnswer(selectedOption) {
+        const currentQuestion = quizData[currentQuestionIndex];
+        const options = optionsContainer.getElementsByTagName("li");
+
+        for (let i = 0; i < options.length; i++) {
+          options[i].style.pointerEvents = "none";
+        }
+
+        if (selectedOption === currentQuestion.answer) {
+          resultContainer.textContent = "正解！";
+          resultContainer.style.color = "green";
+          score++;
+        } else {
+          resultContainer.textContent = `不正解！正解は「${currentQuestion.answer}」です。`;
+          resultContainer.style.color = "red";
+        }
+        
+        for (let i = 0; i < options.length; i++) {
+            if(options[i].textContent === currentQuestion.answer){
+                options[i].classList.add("correct");
+            } else if (options[i].textContent === selectedOption) {
+                options[i].classList.add("incorrect");
+            }
+        }
+
+
+        nextBtn.style.display = "block";
+      }
+
+      function showResult() {
+        questionText.textContent = `クイズ終了！あなたのスコアは ${quizData.length} 問中 ${score} 問正解です。`;
+        optionsContainer.innerHTML = "";
+        resultContainer.innerHTML = "";
+        nextBtn.style.display = "none";
+      }
+
+      nextBtn.addEventListener("click", () => {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < quizData.length) {
+          loadQuestion();
+        } else {
+          showResult();
+        }
+      });
+
+      loadQuestion();
+    </script>
+  </body>
+</html>
