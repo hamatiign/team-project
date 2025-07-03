@@ -6,16 +6,25 @@
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
       type="text/css"
+      rel="stylesheet"
+      type="text/css"
       href="./css/index.css"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="css/index.css" />
     <title>音楽ジャンル紹介サイト</title>
   </head>
-  <body>
+  <body data-theme="cupcake">
     <header>
       <span class="logo"></span>
+      <div>
+        <a href="./html/quiz.html" class="btn btn-ghost text-xl">QUIZ</a>
+      </div>
       <div>
         <a class="btn btn-ghost text-xl" href="./html/search.html">SEARCH</a>
       </div>
@@ -24,200 +33,219 @@
           >GLOSSARY</a
         >
       </div>
-      <div>
-        <a href="./html/quiz.html" class="btn btn-ghost text-xl">QUIZ</a>
-      </div>
     </header>
 
     <h1>好みの音楽ジャンルを見つけよう！</h1>
-    <h2><span>年代で探す</span><span>地域で探す</span></h2>
 
-    <div>
-      <ul class="timeline timeline-vertical">
-        <li>
-          <div class="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </div>
-          <div class="timeline-end timeline-box">
-            <a href="./html/~1900.html">1900年以前</a>
-          </div>
-          <hr />
-        </li>
-        <li>
-          <hr />
-          <div class="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </div>
-          <div class="timeline-end timeline-box">
-            <a href="./html/1900-1950jenre.html">1900~1950</a>
-          </div>
-          <hr />
-        </li>
-        <li>
-          <hr />
-          <div class="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </div>
-          <div class="timeline-end timeline-box">
-            <a href="./html/1950.html">1950s</a>
-          </div>
-          <hr />
-        </li>
-        <li>
-          <hr />
-          <div class="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </div>
-          <div class="timeline-end timeline-box">
-            <a href="./html/1960.html">1960s</a>
-          </div>
-          <hr />
-        </li>
-        <li>
-          <hr />
-          <div class="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </div>
-          <div class="timeline-end timeline-box">
-            <a href="./html/1970.html">1970s</a>
-          </div>
-        </li>
-        <li>
-          <hr />
-          <div class="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </div>
-          <div class="timeline-end timeline-box">
-            <a href="./html/1980~1989.html">1980s</a>
-          </div>
-        </li>
-        <li>
-          <hr />
-          <div class="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </div>
-          <div class="timeline-end timeline-box">
-            <a href="./html/1990~1999.html">1990s</a>
-          </div>
-        </li>
-        <li>
-          <hr />
-          <div class="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </div>
-          <div class="timeline-end timeline-box">
-            <a href="./html/2000~2009.html">2000s</a>
-          </div>
-        </li>
-        <li>
-          <hr />
-          <div class="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </div>
-          <div class="timeline-end timeline-box">
-            <a href="/html/2010~.html">2010~</a>
-          </div>
-        </li>
-      </ul>
+    <div class="container">
+      <div class="contentleft">
+        <h2>おすすめジャンル</h2>
+        <h3>Phonk</h3>
+        <p>
+          1990年代のアメリカ南部ヒップホップにルーツを持つ音楽ジャンル<br />
+          Lo-Fiなビートやレトロなサンプルが特徴。
+        </p>
+        <iframe
+          width="auto"
+          height="auto"
+          src="https://www.youtube.com/embed/mzD50zVl20E?si=GxxJPIXBHSL-D0En"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="contentright">
+        <h2>年代で探す</h2>
+        <div>
+          <ul class="timeline timeline-vertical">
+            <li>
+              <div class="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-5 w-5"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="timeline-end timeline-box">
+                <a href="./html/~1900.html">1900年以前</a>
+              </div>
+              <hr />
+            </li>
+            <li>
+              <hr />
+              <div class="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-5 w-5"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="timeline-end timeline-box">
+                <a href="./html/1900-1950jenre.html">1900~1950</a>
+              </div>
+              <hr />
+            </li>
+            <li>
+              <hr />
+              <div class="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-5 w-5"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="timeline-end timeline-box">
+                <a href="./html/1950.html">1950s</a>
+              </div>
+              <hr />
+            </li>
+            <li>
+              <hr />
+              <div class="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-5 w-5"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="timeline-end timeline-box">
+                <a href="./html/1960.html">1960s</a>
+              </div>
+              <hr />
+            </li>
+            <li>
+              <hr />
+              <div class="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-5 w-5"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="timeline-end timeline-box">
+                <a href="./html/1970.html">1970s</a>
+              </div>
+            </li>
+            <li>
+              <hr />
+              <div class="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-5 w-5"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="timeline-end timeline-box">
+                <a href="./html/1980~1989.html">1980s</a>
+              </div>
+            </li>
+            <li>
+              <hr />
+              <div class="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-5 w-5"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="timeline-end timeline-box">
+                <a href="./html/1990~1999.html">1990s</a>
+              </div>
+            </li>
+            <li>
+              <hr />
+              <div class="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-5 w-5"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="timeline-end timeline-box">
+                <a href="./html/2000~2009.html">2000s</a>
+              </div>
+            </li>
+            <li>
+              <hr />
+              <div class="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-5 w-5"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="timeline-end timeline-box">
+                <a href="/html/2010~.html">2010~</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
     <p>サイトを見てくれてありがとう！</p>
   </body>
